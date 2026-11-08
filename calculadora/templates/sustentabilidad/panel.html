@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Sustentabilidad</title>
+</head>
+<body>
+    <h1>Reporte de Emisiones de Carbono</h1>
+    
+    <h2>Emisiones Totales: {{ emisiones_totales }} kWh</h2>
+    <h3>Planta de Mayor Consumo: {{ planta_destacada }}</h3>
+
+    <hr>
+    
+    <h3>Historial de Plantas:</h3>
+    <ul>
+        {% for planta in registros %}
+            <li>{{ planta.nombre_planta }} - Consumo: {{ planta.consumo_kwh }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
